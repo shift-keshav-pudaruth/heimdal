@@ -1,5 +1,7 @@
 {
-    "name": "optimus/heimdal",
+    "name": "shift-keshav-pudaruth/heimdal",
+    "description": "Exception Handling of JSON APIs for Laravel",
+    "keywords": ["laravel", "exception", "handler", "json", "api"],    
     "autoload": {
         "psr-4": {
             "Optimus\\Heimdal\\": "src/"
