@@ -21,6 +21,7 @@ have [guidelines for how errors should be formatted](http://jsonapi.org/format/#
 ```bash
 composer require optimus/heimdal ~1.0
 ```
+If you’re on Laravel 5.4 or earlier,
 
 Add the service provider to `config/app.php`
 
