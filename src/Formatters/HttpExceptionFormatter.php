@@ -10,12 +10,25 @@ class HttpExceptionFormatter extends ExceptionFormatter
 {
     public function format(JsonResponse $response, Exception $e, array $reporterResponses)
     {
-        parent::format($response, $e, $reporterResponses);
-        
         if (count($headers = $e->getHeaders())) {
             $response->headers->add($headers);
         }
 
         $response->setStatusCode($e->getStatusCode());
+
+        $data = array_merge($response->getData(true), [
+            'code'   => $e->getStatusCode(),
+            'message'   => $e->getMessage(),
+        ]);
+
+        if ($this->debug) {
+            $data = array_merge($data,[
+                'exception' => (string) $e,
+                'line'   => $e->getLine(),
+                'file'   => $e->getFile()
+            ]);
+        }
+
+        $response->setData($data);
     }
 }
