@@ -15,7 +15,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Optimus\Heimdal\Provider\LaravelServiceProvider"
+                "Optimus\\Heimdal\\Provider\\LaravelServiceProvider"
             ]
         }
     },    
