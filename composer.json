@@ -18,7 +18,7 @@
                 "Optimus\Heimdal\Provider\LaravelServiceProvider"
             ]
         }
-    }    
+    },    
     "require": {
         "laravel/framework": "~5.3"
     },
